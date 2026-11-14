@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#111315">
+<title>MV Animações IA</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="app"><div class="scrim" id="scrim"></div>
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="logo">✳</div><div>MV Animações<small>GERADOR COM IA</small></div></div>
+  <button class="new-chat" id="newChat">＋ &nbsp; Nova sessão</button>
+  <div class="side-label">Histórias prontas</div><div id="ready"></div>
+  <div class="side-label">Minhas histórias</div><div id="mine"></div>
+  <div class="side-bottom"><button class="new-chat" id="cfgBtn">⚙ &nbsp; Configurações da IA</button></div>
+</aside>
+<main class="workspace">
+  <header class="topbar"><div class="top-left"><button class="top-btn" id="menuBtn" aria-label="Menu">☰</button><div class="project">~/animações</div></div>
+  <div class="top-right"><span class="project" id="state"><span class="status-dot"></span>pronto</span><button class="top-btn optional" id="clearBtn">Limpar</button></div></header>
+  <section class="content" id="content"><div class="terminal">
+    <div class="welcome" id="welcome"><div class="kicker">● GERADOR DE ANIMAÇÕES</div><h1>Qual história vamos animar?</h1><p>A IA escreve a história e o app desenha, narra, legenda e exporta o vídeo.</p></div>
+    <div class="quick" id="quick">
+      <button data-prompt="Crie uma história sobre um garoto que abre uma bicicletaria e mostra como funciona uma bicicleta"><b>/ bicicletaria</b><span>Garoto abre uma loja</span></button>
+      <button data-prompt="Crie uma história sobre uma padeira que acorda cedo e vê a fila na padaria"><b>/ padaria</b><span>A fila da manhã</span></button>
+      <button data-prompt="Crie uma história engraçada de um pai e um filho que consertam uma caminhonete"><b>/ conserto</b><span>Pai e filho</span></button>
+      <button data-prompt="Crie uma história de aventura à noite no parque com estrelas"><b>/ aventura</b><span>Noite no parque</span></button>
+    </div><div class="output" id="output" aria-live="polite"></div></div></section>
+  <div class="composer-area"><div class="composer">
+    <textarea id="prompt" rows="1" placeholder="Descreva a história que você quer animar…"></textarea>
+    <div class="composer-bottom"><div class="tools"><select id="prov" aria-label="Provedor de IA"></select></div><button class="send" id="sendBtn" aria-label="Enviar">↑</button></div></div>
+  <div class="footer-note">A IA só funciona com a sua chave em ⚙ Configurações. Sem chave, nada é simulado.</div></div>
+</main></div>
+<dialog id="cfg"><h3>Configurações da IA</h3>
+<label>Provedor<select id="cp"></select></label><label>Chave (API key)<input id="ck" type="password" autocomplete="off" placeholder="cole aqui"></label>
+<label>URL (opcional)<input id="cu"></label><label>Modelo (opcional)<input id="cm"></label>
+<p>A chave fica só neste navegador (localStorage) e nunca vai no código do site. Não coloque chaves dentro dos arquivos nem publique no GitHub.</p>
+<div class="row"><button class="big pl" id="csave">Salvar</button><button class="big" id="cclose">Fechar</button></div></dialog>
+<script type="module" src="js/app.js"></script></body></html>
